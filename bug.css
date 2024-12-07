@@ -1,0 +1,7 @@
+The following CSS rule unintentionally targets elements with the class `box` inside of elements with the class `container`, due to the lack of specificity in the selector. This can lead to unexpected styling, particularly if the same class `box` is used in other parts of the page.:
+
+```css
+.container .box {
+  background-color: lightblue;
+}
+```
