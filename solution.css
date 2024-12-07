@@ -1,0 +1,17 @@
+The solution involves using more specific selectors to target the intended elements. This prevents unintended styling of other elements with the same class `box`:
+
+```css
+.container .box {
+  background-color: lightblue; /* This will also be corrected */
+}
+
+/*Corrected selectors */
+.container > .box {
+  background-color: lightblue; /* Only targets direct children */
+}
+.container .box.special {
+  background-color: lightgreen;
+}
+```
+
+By adding more context to the selector using a child combinator `>` (for direct children) or additional classes, we ensure the styling applies only to the intended elements.
